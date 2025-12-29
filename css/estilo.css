@@ -1,43 +1,199 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 
 }
 
 body{
 
-    background-color: aqua;
+    background-color: rgb(0, 140, 69);
     display: grid;
-    height: 100vh;
-    /* justify-items: center;
-    align-items: center; */
-    place-content: center;
-    /* grid-template-columns: 100%; */
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    
 
 }
 
 #container{
     display: grid;
     background-color: white;
-    margin: 40px;
-    padding: 30px;
-    width: 1000px;
-    height: 800px;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 450px 800px;
+    height: 900px;
+    gap: 10px;
+    margin: 10px;
+    border: 1px solid red;
+    border-radius: 20px;
     
-    border-radius: 30px;
-    gap: 20px;
+   /*  grid-template-columns: minmax(0 , 1fr) minmax(300px, 2fr) */
 
 
 }
 
 .ladoA{
 
-    background-color: red;
+    
+    background-image: url(../img/img-login-pizzaria.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 0px 0px 20px;
+
+
+    
 }
 
 .ladoB{
+    display: grid;
+    /* align-items: center; */
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px auto;
 
-    background-color: yellow;
+    /* background-color: yellow; */
+    
 }
+
+/**Campo Login
+*******************************/
+
+.icon-pizzaria{
+    width: 600px;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.area-ladoB{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+    justify-items: center;
+    /* background-color: aqua; */
+    
+
+}
+
+.formulario-login{
+    display: grid;
+    
+    grid-template-rows: 120px auto;
+    /* border: 1px solid red; */
+    /* background-color: yellow; */
+
+}
+
+
+
+.cabecalho-login{
+    
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 10px;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.4em;
+
+}
+
+
+.campo-login{
+   /* background-color: fuchsia; */
+   justify-items: center;
+   margin-top: 10px;
+   padding: 10px;
+   
+}
+
+label{
+    font-size: 1.2em;
+}
+
+button{
+    
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+    background-color: rgb(205, 33, 42);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.6em;
+    
+}
+
+.link{
+    color: white;
+
+}
+
+
+.usuario-senha {
+
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+    border: 1px solid rgb(205, 33, 42);
+    border-radius: 15px;
+
+
+}
+
+
+
+.campo-checkbox{
+    display: grid;
+    grid-template-columns: auto 40px;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+/**Toggle Switch
+*********************************************/
+
+#chk {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  background-color: #777;
+  width: 50px;
+  height: 27px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  transition: all .5s ease-in-out;
+}
+
+#chk:checked ~ .switch {
+  background-color:  rgb(205, 33, 42);
+}
+
+#chk:checked ~ .switch .slider {
+  transform: translateX(20px);
+}
+
+
